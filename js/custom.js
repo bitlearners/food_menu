@@ -278,7 +278,7 @@ $(document).ready(function()
 				autoplay:false,
 				nav:false,
 				dots:false,
-				smartSpeed:1200
+				smartSpeed:0
 			});
 
 			/* Custom nav events */
@@ -339,7 +339,7 @@ $(document).ready(function()
 
 				prev.on('click', function()
 				{
-					testSlider.trigger('prev.owl.carousel');
+				//	testSlider.trigger('prev.owl.carousel');
 				});
 			}
 
@@ -349,7 +349,7 @@ $(document).ready(function()
 
 				next.on('click', function()
 				{
-					testSlider.trigger('next.owl.carousel');
+					//testSlider.trigger('next.owl.carousel');
 				});
 			}
 		}
