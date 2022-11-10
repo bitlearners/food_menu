@@ -822,10 +822,7 @@ section
 {
 	margin-top: 70px;
 }
-.flipInX
-{
-	animation-delay: 600ms;
-}
+
 
 /*********************************
 4.2 Home Slider Nav
@@ -1023,16 +1020,7 @@ section
 {
 	display: flex!important;
 }
-/* Fade in tabs */
-@-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 .search_panel_content
 {
 	width: 100%;

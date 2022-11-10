@@ -101,7 +101,7 @@ $(document).ready(function()
 			homeSlider.owlCarousel(
 			{
 				items:1,
-				loop:true,
+				loop:false,
 				autoplay:false,
 				smartSpeed:1200,
 				dotsContainer:'main_slider_custom_dots'
@@ -114,7 +114,7 @@ $(document).ready(function()
 
 				prev.on('click', function()
 				{
-					homeSlider.trigger('prev.owl.carousel');
+					//homeSlider.trigger('prev.owl.carousel');
 				});
 			}
 
@@ -124,7 +124,7 @@ $(document).ready(function()
 
 				next.on('click', function()
 				{
-					homeSlider.trigger('next.owl.carousel');
+					//homeSlider.trigger('next.owl.carousel');
 				});
 			}
 
@@ -135,7 +135,7 @@ $(document).ready(function()
 				{
 					$('.home_slider_custom_dot').removeClass('active');
 					$(this).addClass('active');
-					homeSlider.trigger('to.owl.carousel', [$(this).index(), 300]);
+					//homeSlider.trigger('to.owl.carousel', [$(this).index(), 300]);
 				});
 			}
 
@@ -166,20 +166,20 @@ $(document).ready(function()
 			}
 
 			// Fired before current slide change
-			homeSlider.on('change.owl.carousel', function(event)
+			/*homeSlider.on('change.owl.carousel', function(event)
 			{
 				var $currentItem = $('.home_slider_item', homeSlider).eq(event.item.index);
 				var $elemsToanim = $currentItem.find("[data-animation-out]");
 				setAnimation ($elemsToanim, 'out');
-			});
+			});*/
 
 			// Fired after current slide has been changed
-			homeSlider.on('changed.owl.carousel', function(event)
+			/*homeSlider.on('changed.owl.carousel', function(event)
 			{
 				var $currentItem = $('.home_slider_item', homeSlider).eq(event.item.index);
 				var $elemsToanim = $currentItem.find("[data-animation-in]");
 				setAnimation ($elemsToanim, 'in');
-			})
+			})*/
 		}
 	}
 
