@@ -100,10 +100,10 @@ $(document).ready(function()
 
 			homeSlider.owlCarousel(
 			{
-				items:1,
+				items:0,
 				loop:false,
 				autoplay:false,
-				smartSpeed:1200,
+				smartSpeed:0,
 				dotsContainer:'main_slider_custom_dots'
 			});
 
