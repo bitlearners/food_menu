@@ -16,50 +16,81 @@
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 
 	<style>
+		.scroll-down-arrow {
+			background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
 
+		.scroll-down-link {
+			position: absolute;
+			z-index: 100;
+			cursor: pointer;
+			height: 60px;
+			width: 80px;
+			margin: 0px 0 0 -40px;
+			line-height: 60px;
+			left: 50%;
+			bottom: 10px;
+			color: #FFF;
+			text-align: center;
+			font-size: 70px;
+			text-decoration: none;
+			text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+			-webkit-animation: fade_move_down 2s ease-in-out infinite;
+			-moz-animation: fade_move_down 2s ease-in-out infinite;
+			animation: fade_move_down 2s ease-in-out infinite;
 
-.scroll-down-arrow {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+			/*animated scroll arrow animation*/
+			@-webkit-keyframes fade_move_down {
+				0% {
+					-webkit-transform: translate(0, -20px);
+					opacity: 0;
+				}
 
-.scroll-down-link {
-  position: absolute;
-  z-index: 100;
-  cursor:pointer;
-  height: 60px;
-  width: 80px;
-  margin: 0px 0 0 -40px;
-  line-height: 60px;
-  left: 50%;
-  bottom: 10px;
-  color: #FFF;
-  text-align: center;
-  font-size: 70px;
-  text-decoration: none;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
-  -webkit-animation: fade_move_down 2s ease-in-out infinite;
-  -moz-animation:    fade_move_down 2s ease-in-out infinite;
-  animation:         fade_move_down 2s ease-in-out infinite;
-  /*animated scroll arrow animation*/
-  @-webkit-keyframes fade_move_down {
-    0%   { -webkit-transform:translate(0,-20px); opacity: 0;  }
-    50%  { opacity: 1;  }
-    100% { -webkit-transform:translate(0,20px); opacity: 0; }
-  }
-  @-moz-keyframes fade_move_down {
-    0%   { -moz-transform:translate(0,-20px); opacity: 0;  }
-    50%  { opacity: 1;  }
-    100% { -moz-transform:translate(0,20px); opacity: 0; }
-  }
-  @keyframes fade_move_down {
-    0%   { transform:translate(0,-20px); opacity: 0;  }
-    50%  { opacity: 1;  }
-    100% { transform:translate(0,20px); opacity: 0; }
-  }
-}
-		</style>
+				50% {
+					opacity: 1;
+				}
+
+				100% {
+					-webkit-transform: translate(0, 20px);
+					opacity: 0;
+				}
+			}
+
+			@-moz-keyframes fade_move_down {
+				0% {
+					-moz-transform: translate(0, -20px);
+					opacity: 0;
+				}
+
+				50% {
+					opacity: 1;
+				}
+
+				100% {
+					-moz-transform: translate(0, 20px);
+					opacity: 0;
+				}
+			}
+
+			@keyframes fade_move_down {
+				0% {
+					transform: translate(0, -20px);
+					opacity: 0;
+				}
+
+				50% {
+					opacity: 1;
+				}
+
+				100% {
+					transform: translate(0, 20px);
+					opacity: 0;
+				}
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -68,7 +99,7 @@
 
 		<!-- Header -->
 
-		
+
 
 
 		<!-- Home -->
@@ -87,20 +118,27 @@
 					<!-- Slider Item -->
 					<div class="owl-item ">
 						<!-- Image by https://unsplash.com/@anikindimitry -->
-						<div class="home_slider_background" style="background-image:url(images/home_slider.jpg)"></div>
+						<div class="home_slider_background" style="background-image:url(images/home_slider.webp)"></div>
 
-						<div class="home_slider_content text-center">
-							
-								<h1>Atrangi</h1>
-								<h1>Night</h1>
-								
-								<div class="button home_slider_button">
-									<div class="button_bcg"></div><a href="#food">explore
-										menu<span></span><span></span><span></span></a>
 
-										
-								
+
+						<div class="home_slider_content text-center ">
+
+							<div class="button home_slider_button">
+								<div class="button_bcg"></div>
+								<a href="#food">explore menu<span></span><span></span><span></span></a>
+
 							</div>
+
+							<h1>Atarangi</h1>
+							<h1>Night</h1>
+
+							
+
+
+
+
+
 						</div>
 					</div>
 
@@ -109,9 +147,9 @@
 				</a>
 
 				<!-- Home Slider Nav - Prev -->
-				
 
-			
+
+
 				<!-- Home Slider Dots -->
 
 
@@ -127,12 +165,12 @@
 
 		<div class="intro">
 			<div class="container">
-				
+
 				<div class="row intro_items">
 
 					<!-- Intro Item -->
 
-					
+
 
 					<!-- Intro Item -->
 
@@ -143,7 +181,7 @@
 							<div class="intro_item_background" style="background-image:url(images/intro_2.jpg)"></div>
 							<div
 								class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-								
+
 								<div class="button intro_button">
 									<div class="button_bcg"></div><a href="#">see
 										menu<span></span><span></span><span></span></a>
@@ -172,9 +210,9 @@
 							<div class="intro_item_background" style="background-image:url(images/intro_1.jpg)"></div>
 							<div
 								class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-								
-								
-								<div class="button intro_button" >
+
+
+								<div class="button intro_button">
 									<div class="button_bcg"></div><a href="#">see
 										menu<span></span><span></span><span></span></a>
 								</div>
@@ -200,7 +238,7 @@
 							<div class="intro_item_background" style="background-image:url(images/intro_3.jpg)"></div>
 							<div
 								class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-								
+
 								<div class="button intro_button">
 									<div class="button_bcg"></div><a href="#">see
 										menu<span></span><span></span><span></span></a>
@@ -227,7 +265,7 @@
 				</div>
 			</div>
 
-		
+
 
 
 			<!-- Copyright -->
@@ -235,7 +273,7 @@
 
 
 		</div>
-	
+
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="styles/bootstrap4/popper.js"></script>
 		<script src="styles/bootstrap4/bootstrap.min.js"></script>
